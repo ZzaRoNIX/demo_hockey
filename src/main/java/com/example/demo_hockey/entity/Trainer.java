@@ -15,7 +15,7 @@ import java.util.Date;
 @AllArgsConstructor
 @Entity
 @Builder
-public class AllTrainerInfo {
+public class Trainer {
 
     // @GeneratedValue(strategy = GenerationType.AUTO)
     // int id;

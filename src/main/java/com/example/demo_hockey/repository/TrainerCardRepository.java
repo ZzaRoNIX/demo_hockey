@@ -1,14 +1,12 @@
 package com.example.demo_hockey.repository;
 
-import com.example.demo_hockey.entity.AllTrainerInfo;
-import lombok.val;
+import com.example.demo_hockey.entity.Trainer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.Optional;
 // репозиторий
-public interface TrainerCardRepository extends JpaRepository<AllTrainerInfo, Integer> {
+public interface TrainerCardRepository extends JpaRepository<Trainer, Integer> {
     // метод
-    AllTrainerInfo findByFullName(String fullName);
+    Trainer findByFullName(String fullName);
     
 }
 
