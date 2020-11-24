@@ -1,11 +1,8 @@
 package com.example.demo_hockey.controller;
 
-import com.example.demo_hockey.entity.Additional;
 import com.example.demo_hockey.entity.Arena;
 import com.example.demo_hockey.entity.Trainer;
-import com.example.demo_hockey.repository.AdditonalRepository;
 import com.example.demo_hockey.repository.ArenasInfoRepository;
-import com.example.demo_hockey.repository.ImageRepository;
 import com.example.demo_hockey.repository.TrainerCardRepository;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -16,8 +13,6 @@ import lombok.val;
 import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
-import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 // маршутиризатор
@@ -28,14 +23,12 @@ public class MainController {
 
     final TrainerCardRepository trainerCardRepository;
     final ArenasInfoRepository arenasInfoRepository;
-    final AdditonalRepository additonalRepository;
-    final ImageRepository imageRepository;
 
-    public MainController(TrainerCardRepository trainerCardRepository, ArenasInfoRepository arenasInfoRepository, AdditonalRepository additonalRepository, ImageRepository imageRepository) {
+
+    public MainController(TrainerCardRepository trainerCardRepository, ArenasInfoRepository arenasInfoRepository) {
         this.trainerCardRepository = trainerCardRepository;
         this.arenasInfoRepository = arenasInfoRepository;
-        this.additonalRepository = additonalRepository;
-        this.imageRepository = imageRepository;
+
     }
 
     // создание карты тренера
