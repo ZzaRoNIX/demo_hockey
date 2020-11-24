@@ -14,6 +14,8 @@ import javax.persistence.*;
 @Entity
 public class Image {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    int id;
     String link;
     @ManyToOne
     Arena arena;

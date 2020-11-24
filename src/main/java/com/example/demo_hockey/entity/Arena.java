@@ -2,6 +2,7 @@ package com.example.demo_hockey.entity;
 
 import lombok.*;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -24,8 +25,8 @@ public class Arena {
     String telegram;
     String youtube;
     
-    @OneToMany
+    @OneToMany(cascade = {CascadeType.ALL})
     List<Image> images;
-    @OneToMany
+    @OneToMany(cascade = {CascadeType.ALL})
     List<Additional> additionals;
 }

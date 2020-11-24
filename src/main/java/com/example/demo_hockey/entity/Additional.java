@@ -5,9 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Setter
 @Getter
@@ -16,6 +14,8 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Additional {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    int id;
     String info;
     String value;
     @ManyToOne
